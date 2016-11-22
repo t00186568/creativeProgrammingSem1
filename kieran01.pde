@@ -5,21 +5,15 @@ void setup() {
 }
 
 void draw() {
-  int newColor = 255;
- 
-  for (int i = 0; i ){
-    
-    if(mousePressed){
-      fill(i);
-    }
-  }
+ int[] colorArray = {0xFFFFFF, 0x808080, 0xFF0000 , 0x0000FF};
   
-  /*while (newColor > 10000) {
-     if(mousePressed){
-       fill(newColor++);
-     }else{
-       fill(newColor--);
-     }
-  }*/
+  if(mousePressed){
+    fill(colorArray);
+  } else {
+   fill( 0);  
+  }
+    
+    
+  
   ellipse(mouseX, mouseY, 80, 80);
 }
