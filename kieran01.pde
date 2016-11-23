@@ -1,14 +1,17 @@
 import java.util.*;
+import java.util.Random;
 
 void setup() {
   size(480, 120);
 }
 
 void draw() {
- int[] colorArray = {0xFFFFFF, 0x808080, 0xFF0000 , 0x0000FF};
-  
+ String[] colorArray = {"#FFFFFF", "#808080", "#FF0000" , "#0000FF"};
+ 
+ String randColor = colorArray[(int) (Math.random() * colorArray.length)];
+ //Integer.parseInt(randColor, 16);
   if(mousePressed){
-    fill(colorArray);
+    fill(randColor);
   } else {
    fill( 0);  
   }
