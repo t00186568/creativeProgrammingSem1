@@ -6,12 +6,13 @@ void setup() {
 }
 
 void draw() {
- String[] colorArray = {"255,255,255", "128,128,128", "255,0,0" , "0,0,255"};
+ int[] colorArray = {"255,255,255", "128,128,128", "255,0,0" , "0,0,255"};
  
- String randColor = colorArray[(int) (Math.random() * colorArray.length)];
- int intRandColor = Integer.parseInt(randColor);
+ int randColor = colorArray[(int) (Math.random() * colorArray.length)];
+ int intRandColor = Color.parseColor("#" + randColor);
+
   if(mousePressed){
-    fill(RGB, intRandColor);
+    fill(RGB, randColor);
   } else {
    fill( 0);  
   }
