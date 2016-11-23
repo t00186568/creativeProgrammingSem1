@@ -6,7 +6,7 @@ void setup() {
 }
 
 void draw() {
- int[] colorArray = {"255,255,255", "128,128,128", "255,0,0" , "0,0,255"};
+ int[][] colorArray = {[255,255,255], [128,128,128], [255,0,0] , [0,0,255]};
  
  int randColor = colorArray[(int) (Math.random() * colorArray.length)];
  int intRandColor = Color.parseColor("#" + randColor);
