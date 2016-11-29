@@ -6,18 +6,25 @@ void setup() {
   size(480, 120);
 }
 
-void draw() {
+void consoleInput() { //Console workaround
+    
+    StringBuffer buffer = new StringBuffer();
+    
+    
+}
+
+
+interface draw extends consoleInput {
 
 //  Scanner scanner = null;
  
   Scanner scanner = new Scanner(System.in);
-    int colorInput;
+    
     System.out.print("Please enter your color code: ");
     if(scanner.hasNextInt()) { // or hasNext()
-        colorInput = scanner.nextInt();
+        int colorInput = scanner.nextInt();
     }
    
-    
     
     if (mousePressed) {
       fill(colorInput);
