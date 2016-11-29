@@ -4,16 +4,18 @@ import java.util.*;
 
 void setup() {
   size(480, 120);
+  smooth();
+  PFont font = loadFont("Arial.vlw"); textFont(font);
 }
 
 void consoleInput() { //Console workaround
     
     StringBuffer buffer = new StringBuffer();
-    
+    boolean convert = false;
     
 }
 
-
+////////////////////////////////////////////////////
 interface draw extends consoleInput {
 
 //  Scanner scanner = null;
