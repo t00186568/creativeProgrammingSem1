@@ -18,6 +18,7 @@ void draw() {
     }
    
     
+    
     if (mousePressed) {
       fill(colorInput);
     } else {
