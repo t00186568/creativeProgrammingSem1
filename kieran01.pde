@@ -1,6 +1,9 @@
 import java.util.*;
 
 
+StringBuffer buffer = new StringBuffer();
+boolean convert = false;
+
 
 void setup() {
   size(480, 120);
@@ -10,12 +13,21 @@ void setup() {
 
 void consoleInput() { //Console workaround
     
-    StringBuffer buffer = new StringBuffer();
-    boolean convert = false;
+    
+    
+    int readInt(int x, int y){
+      text(buffer.toString(), x, y);
+      if(convert){
+       return Integer.parseInt(buffer.toString()); 
+      }else{
+        return 0;
+      }
+    }
     
 }
 
 ////////////////////////////////////////////////////
+/*
 interface draw extends consoleInput {
 
 //  Scanner scanner = null;
@@ -38,11 +50,12 @@ interface draw extends consoleInput {
 
  scanner.close();
 
-/*finally { 
+finally { 
   if(scanner != null){
     scanner.close();
     }
 }*/
 
 
-}
+
+//}
